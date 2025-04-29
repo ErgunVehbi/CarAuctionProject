@@ -4,13 +4,6 @@ import requests
 import csv
 from urllib.request import urlopen
 
-#Prints Title
-
-
-
-
-
-
 
 def main():
     url = "https://angliacarauctions.co.uk/auctions/2700-30-Apr-2025"
@@ -20,6 +13,8 @@ def main():
     soup.find_all("div")
     output = soup.select('div.col-xl-4.col-md-6.col-12') 
     title = soup.select('h3.text-secondary.card-title.fw-bold')
+
+    ############Continue from here with scraping the each detail for the car#############################
     car_info = soup.select('table.vehListProp tr')
 
     list(title)
